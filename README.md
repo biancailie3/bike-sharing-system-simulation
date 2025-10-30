@@ -1,6 +1,10 @@
-Bike Sharing Simulation
+**Bike Sharing Simulation**
+
+
 A Python simulation of a bike-sharing system using SimPy.
-Features:
+
+**Features:**
+
 Multiple stations with different capacities and initial bike counts
 Time-slot specific bike failure probabilities
 Customer trips simulated in parallel
