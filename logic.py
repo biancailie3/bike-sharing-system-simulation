@@ -5,9 +5,7 @@ import random
 # Parametri impliciți (pot fi suprascriși de interfață)
 DAY_LENGTH = 720 # 12 ore
 
-# Clasele tale (nemodificate ca logică)
 class BikeStation:
-    # Am adaugat lat si lon aici in paranteza
     def __init__(self, name, capacity, init_bikes, lat, lon):
         self.name = name
         self.capacity = capacity
