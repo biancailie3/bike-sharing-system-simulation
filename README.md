@@ -28,6 +28,39 @@ Using **Discrete Event Simulation (DES)**, this application models customer beha
 * **Geospatial:** [Folium](https://python-visualization.github.io/folium/) & `streamlit-folium`
 * **Data Manipulation:** Pandas
 * **Language:** Python 3
+* 
+* ⚙️ How It Works ( The Logic)
+The simulation runs two parallel processes in a virtual environment:
+
+The Customer Process:
+
+A customer arrives at a random station.
+
+Rental Check: Is there a bike? If No → Lost Customer (Revenue Loss).
+
+Journey: The customer rides for a random duration (10-25 mins).
+
+Return Check: Is there a dock?
+
+If Yes → Happy Customer (Revenue Gain).
+
+If No → Rerouting Event: The customer travels to the nearest station. The ride is free (Revenue Loss) and the customer is flagged as "Unhappy/Rerouted".
+
+The Logistics Process (The Truck):
+
+Every X minutes, the truck calculates the average fleet density.
+
+It collects bikes from "Overloaded" stations (High Surplus).
+
+It distributes bikes to "Starving" stations (High Deficit).
+
+📊 Data Visualization
+
+Interactive Folium Map: Geospatial view of stations in Timișoara (Piața Unirii, Gara de Nord, Complex, Iulius Mall) with dynamic status coloring (Red/Orange/Green).
+
+Operational KPIs: Trackers for Happy Customers, Lost Demand (No Bike), and Rerouted Customers (No Space).
+
+Tabbed Analytics: Detailed charts for individual station inventory history and loss cause analysis.
 
 ## 📂 Project Structure
 
