@@ -38,12 +38,10 @@ class BikeSharingSystem:
         self.happy_customers = 0
         self.unhappy_no_bike = 0
         self.unhappy_no_space = 0
-        
-        # AICI ERA PROBLEMA: Pornim procesele, deci ele trebuie să existe mai jos
+
         self.env.process(self.customer_generator())
         self.env.process(self.rebalancer())
 
-    # --- ACEASTA FUNCȚIE LIPSEA DIN CODUL TĂU ---
     def customer_generator(self):
         while True:
             yield self.env.timeout(random.expovariate(1/5))
@@ -65,7 +63,6 @@ class BikeSharingSystem:
         if not end_station.return_bike():
             self.unhappy_no_space += 1
 
-    # --- ACEASTA TREBUIE SĂ FIE ÎN INTERIORUL CLASEI (INDENTATĂ) ---
     def rebalancer(self):
         while True:
             yield self.env.timeout(self.rebalance_interval)
