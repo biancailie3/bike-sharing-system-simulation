@@ -9,7 +9,7 @@
 Using **Discrete Event Simulation (DES)**, this application models customer behavior, station capacity, and maintenance logistics to visualize potential bottlenecks in a real-world city infrastructure.
 
 ## 🚀 Live Demo
-**Try the interactive application here:** 👉 **([https://bike-sharing-system-simulation-aw6dd37pqn3txndmjkvmhc.streamlit.app/](https://bike-sharing-system-simulation-suftp89drzfgpbqy4sgkba.streamlit.app/)**
+**Try the interactive application here:** 👉 **[https://bike-sharing-system-simulation-aw6dd37pqn3txndmjkvmhc.streamlit.app/](https://bike-sharing-system-simulation-suftp89drzfgpbqy4sgkba.streamlit.app/)**
 
 ---
 
