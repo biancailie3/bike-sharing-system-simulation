@@ -5,11 +5,10 @@ import folium
 from streamlit_folium import st_folium
 import logic
 
-# Configurare pagină
+
 st.set_page_config(layout="wide", page_title="EcoRide Business Dashboard")
 st.title("🚲 EcoRide Timișoara: Simulare & Business")
 
-# --- 1. CONFIGURARE (SIDEBAR) ---
 st.sidebar.header("Setări Simulare")
 
 if 'simulare_activa' not in st.session_state:
@@ -49,12 +48,11 @@ if st.sidebar.button("▶️ Rulează Scenariul"):
         st.session_state.rezultate_stations = stations
         st.session_state.simulare_activa = True
 
-# --- 2. DASHBOARD REZULTATE ---
+# --- DASHBOARD REZULTATE ---
 if st.session_state.simulare_activa:
     sys = st.session_state.rezultate_system
     stations = st.session_state.rezultate_stations
 
-    # --- A. MODUL FINANCIAR ---
     st.header("💰 Performanță Financiară")
     
     PRET_INCHIRIERE = 5     
@@ -74,7 +72,6 @@ if st.session_state.simulare_activa:
 
     st.divider()
 
-    # --- B. KPI OPERAȚIONALI (AICI AM REPUS NUMERELE) ---
     st.subheader("📊 Statistici Clienți (Totaluri)")
     
     kpi1, kpi2, kpi3 = st.columns(3)
@@ -90,7 +87,7 @@ if st.session_state.simulare_activa:
 
     st.divider()
 
-    # --- C. HARTA ---
+    # --- HARTA ---
     st.subheader("📍 Harta Status Final")
     col_map, col_empty = st.columns([2, 1]) 
     
@@ -110,7 +107,7 @@ if st.session_state.simulare_activa:
 
     st.divider()
 
-    # --- D. ANALIZĂ DETALIATĂ (GRAFICE) ---
+    # ---  GRAFICE ---
     st.subheader("📈 Analiză Detaliată")
     tab1, tab2, tab3 = st.tabs(["📉 Evoluție Individuală", "📊 Top Aglomerație", "⚠️ Pierderi & Rerutări"])
 
